@@ -48,7 +48,7 @@ export default {
   --bottom: 0;
   --left-right: -10%;
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 0;
   right: 0;
   height: 100vh;
@@ -89,14 +89,14 @@ export default {
   }
 }
 
-.vignette {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 5;
-  height: 100%;
-  width: 100%;
+// .vignette {
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   z-index: 5;
+//   height: 100%;
+//   width: 100%;
 
-  box-shadow: inset 0 0 100px #fff;
-}
+//   box-shadow: inset 0 0 100px #fff;
+// }
 </style>
