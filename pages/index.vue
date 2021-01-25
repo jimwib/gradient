@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <TheGradient />
+      <TheGradient type="hedgehog" />
     </div>
   </div>
 </template>
@@ -10,4 +10,8 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss">
+:root {
+  --warm-gray: #f4f1ef;
+}
+</style>

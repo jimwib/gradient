@@ -1,13 +1,15 @@
 <template>
-  <div class="gradient-wrapper">
+  <div
+    ref="gradient"
+    class="gradient"
+    :class="[`gradient--${blockType}`, `gradient--${type}`]"
+  >
     <canvas
       ref="gradient-canvas"
       class="gradient-canvas"
-      :class="[`gradient-canvas--${blockType}`, `gradient-canvas--${type}`]"
       data-js-lighten-top
       data-transition-in
     />
-    <div class="vignette"></div>
   </div>
 </template>
 <script>
@@ -21,6 +23,18 @@ export default {
     blockType: {
       type: String,
       default: "default"
+    }
+  },
+  data() {
+    return {
+      gradient: false
+    };
+  },
+  watch: {
+    type(newVal, oldVal) {
+      // watch it
+      console.log("Prop changed: ", newVal, " | was: ", oldVal);
+      this.updateGradientColors();
     }
   },
   mounted() {
@@ -37,13 +51,29 @@ export default {
      * Gradient.toggleColor(index)
      * Gradient.updateFrequency(freq)
      */
-    const gradient = new Gradient();
-    gradient.initGradient(this.$refs["gradient-canvas"]);
+    this.gradient = new Gradient();
+    // gradient.amp = 0
+    this.gradient.initGradient(this.$refs["gradient-canvas"]);
+  },
+  methods: {
+    updateGradientColors() {
+      // const newColors = [
+      //   '0x333633',
+      //   '0xffff00',
+      //   '0x222222',
+      //   '0x1c3f8e',
+      //   '0x8a92a6',
+      //   '0xfffff',
+      // ]
+
+      console.log("update gradient colors");
+      // this.gradient.sectionColors(newColors)
+    }
   }
 };
 </script>
 <style lang="scss">
-.gradient-wrapper {
+.gradient {
   --top: 0;
   --bottom: 0;
   --left-right: -10%;
@@ -54,12 +84,8 @@ export default {
   height: 100vh;
   transform: translateY(-50%);
   pointer-events: none;
-}
 
-.gradient-canvas {
-  width: 100%;
-  height: 100%;
-  --gradient-color-background: #ffffff;
+  --gradient-color-background: var(--warm-gray);
   &--brand {
     --gradient-color-1: #27365e;
     --gradient-color-2: #352fba;
@@ -87,6 +113,30 @@ export default {
     --gradient-color-3: #df2652;
     --gradient-color-4: #99334c;
   }
+
+  &--hero {
+    --top: -30%;
+    --bottom: 55%;
+    height: 100vh;
+  }
+
+  &--product {
+    --top: -20%;
+    --bottom: 5%;
+    height: 100vh;
+  }
+
+  &--page {
+    --top: -15%;
+    --bottom: 5%;
+    height: 125vh;
+  }
+}
+
+.gradient-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 // .vignette {
@@ -96,7 +146,7 @@ export default {
 //   z-index: 5;
 //   height: 100%;
 //   width: 100%;
-
-//   box-shadow: inset 0 0 100px #fff;
+//   background: red;
+//   box-shadow: inset 0 0 50px var(--warm-gray), 0 0 800px var(--warm-gray);
 // }
 </style>
