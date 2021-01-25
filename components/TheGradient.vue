@@ -7,7 +7,7 @@
     <canvas
       ref="gradient-canvas"
       class="gradient-canvas"
-      data-js-lighten-top
+      :data-js-darken-top="blockType === 'hero'"
       data-transition-in
     />
   </div>
@@ -32,8 +32,6 @@ export default {
   },
   watch: {
     type(newVal, oldVal) {
-      // watch it
-      console.log("Prop changed: ", newVal, " | was: ", oldVal);
       this.updateGradientColors();
     }
   },
@@ -52,22 +50,11 @@ export default {
      * Gradient.updateFrequency(freq)
      */
     this.gradient = new Gradient();
-    // gradient.amp = 0
     this.gradient.initGradient(this.$refs["gradient-canvas"]);
   },
   methods: {
     updateGradientColors() {
-      // const newColors = [
-      //   '0x333633',
-      //   '0xffff00',
-      //   '0x222222',
-      //   '0x1c3f8e',
-      //   '0x8a92a6',
-      //   '0xfffff',
-      // ]
-
-      console.log("update gradient colors");
-      // this.gradient.sectionColors(newColors)
+      this.gradient.initGradient(this.$refs["gradient-canvas"]);
     }
   }
 };
@@ -138,15 +125,4 @@ export default {
   height: 100%;
   position: absolute;
 }
-
-// .vignette {
-//   position: absolute;
-//   left: 0px;
-//   top: 0px;
-//   z-index: 5;
-//   height: 100%;
-//   width: 100%;
-//   background: red;
-//   box-shadow: inset 0 0 50px var(--warm-gray), 0 0 800px var(--warm-gray);
-// }
 </style>
