@@ -4,10 +4,25 @@
       <section class="hero container section">
         <TheGradient type="brand" block-type="hero" />
       </section>
+
       <div style="height: 100px;"></div>
+      <section class="hero container section">
+        <TheGradient type="connectors" block-type="product" />
+      </section>
+
+         <div style="height: 100px;"></div>
+      <section class="hero container section">
+        <TheGradient type="presence" block-type="product" />
+      </section>
+
+         <div style="height: 100px;"></div>
       <section class="hero container section">
         <TheGradient type="hedgehog" block-type="product" />
       </section>
+      
+      
+      
+      
       <div style="height: 300px;"></div>
     </div>
   </div>

@@ -74,25 +74,39 @@ export default {
 
   --gradient-color-background: var(--warm-gray);
   &--brand {
-    --gradient-color-1: #27365e;
-    --gradient-color-2: #352fba;
+    --gradient-color-1: #1c3f8e;
+    --gradient-color-2: #352FBA;
     --gradient-color-3: #1c3f8e;
-    --gradient-color-4: #8a92a6;
+    --gradient-color-4: #35549c;
   }
 
+  //   &--brand {
+  //   --gradient-color-1: #1c3f8e;
+  //   --gradient-color-2: #352FBA;
+  //   --gradient-color-3: #1c3f8e;
+  //   --gradient-color-4: #3e59cf;
+  // }
+
   &--presence {
-    --gradient-color-1: #2d5e5d;
-    --gradient-color-2: #838758;
-    --gradient-color-3: #3f935d;
-    --gradient-color-4: #7f825f;
+    --gradient-color-1: #3F935D;
+    --gradient-color-2: #2b6b4b;
+    --gradient-color-3: #3F935D;
+    --gradient-color-4: #2D5E5D;
   }
 
   &--hedgehog {
-    --gradient-color-1: #bc1b1b;
-    --gradient-color-2: #e25203;
-    --gradient-color-3: #ed1c24;
-    --gradient-color-4: #e27817;
+    --gradient-color-1: #E25203;
+    --gradient-color-2: #ED1C24;
+    --gradient-color-3: #ED1C24;
+    --gradient-color-4: #fa752d;
   }
+
+  //   &--hedgehog {
+  //   --gradient-color-1: #E25203;
+  //   --gradient-color-2: #ED1C24;
+  //   --gradient-color-3: #ED1C24;
+  //   --gradient-color-4: #E25203;
+  // }
 
   &--connectors {
     --gradient-color-1: #ad6491;
