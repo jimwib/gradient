@@ -80,6 +80,13 @@ export default {
     --gradient-color-4: #35549c;
   }
 
+  &--predictor {
+    --gradient-color-1: #e69e29;
+    --gradient-color-2: #dfb10c;
+    --gradient-color-3: #e18900;
+    --gradient-color-4: #e69e29;
+  }
+
   //   &--brand {
   //   --gradient-color-1: #1c3f8e;
   //   --gradient-color-2: #352FBA;

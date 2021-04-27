@@ -2,8 +2,14 @@
   <div class="container">
     <div>
       <section class="hero container section">
-        <TheGradient type="brand" block-type="hero" />
+        <TheGradient type="predictor" block-type="hero" />
       </section>
+
+      <div style="height: 100px;"></div>
+      <section class="hero container section">
+        <TheGradient type="brand" block-type="product" />
+      </section>
+
 
       <div style="height: 100px;"></div>
       <section class="hero container section">
