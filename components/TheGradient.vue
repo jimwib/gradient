@@ -81,10 +81,10 @@ export default {
   }
 
   &--predictor {
-    --gradient-color-1: #e69e29;
-    --gradient-color-2: #dfb10c;
-    --gradient-color-3: #e18900;
-    --gradient-color-4: #e69e29;
+    --gradient-color-1: #7430a3;
+    --gradient-color-2: #a354ca;
+    --gradient-color-3: #6b19c9;
+    --gradient-color-4: #7430a3;
   }
 
   //   &--brand {
